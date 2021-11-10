@@ -1,5 +1,4 @@
 h1 {
-    text-align: center;
     font-size: xx-large;
 }
 
@@ -7,4 +6,13 @@ img {
     display: block;
     margin: 0 auto;
     width: 25%;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+div {
+    text-align: center;
+    text-transform: capitalize;
 }

@@ -1,11 +1,19 @@
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div>
-     <h1>Hello From Bridgelabz!!!</h1>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { title: "Hello From Bridgelabz!!!" }
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>{this.state.title}</h1>
+      </div>
+    );
+  }
 }
 
 export default App;

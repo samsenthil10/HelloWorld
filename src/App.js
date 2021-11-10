@@ -15,9 +15,16 @@ class App extends React.Component {
     window.open(this.url, "_blank");
   }
 
-  onNameChange=(event)=>{
-    console.log("value is",event.target.value);
-    this.setState({userName:event.target.value})
+  onNameChange = (event) => {
+
+    const nameRegex = RegExp("^[A-Z]{1}[a-zA-Z\\s]{2,}$");
+    this.setState({ userName: event.target.value });
+    if (nameRegex.test(event.target.value)) {
+      this.setState({ nameError: "" })
+    }
+    else {
+      this.setState({ nameError: "Invalid Name" })
+    }
   }
 
   render() {
@@ -27,6 +34,7 @@ class App extends React.Component {
         <img src={logo} onClick={this.onClick} alt="Bridgelabz logo"></img>
       </div><div>
           <input onChange={this.onNameChange}></input>
+          <span className="error-output">{this.state.nameError}</span>
         </div></>
     );
   }

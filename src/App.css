@@ -16,3 +16,10 @@ div {
     text-align: center;
     text-transform: capitalize;
 }
+
+.error-output {
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}

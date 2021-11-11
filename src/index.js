@@ -1,23 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { render } from "react-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
-import { Route, Routes, BrowserRouter } from "react-router-dom";
-
-const routing = (
+const rootElement = document.getElementById("root");
+render(
   <BrowserRouter>
     <Routes>
-      <Route path="/home" element={<App />} />
-      <Route path="home" element={<Home />}></Route>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
     </Routes>
-  </BrowserRouter>
+  </BrowserRouter>,
+  rootElement
 );
-
-ReactDOM.render(
-  routing,
-  document.getElementById("root")
-);
-
-reportWebVitals();

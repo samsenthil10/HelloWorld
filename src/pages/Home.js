@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import logo from './assets/img/BridgeLabzLogo.png'
+import '../assets/css/About.css';
+import logo from '../assets/img/BridgeLabzLogo.png'
 
 class App extends React.Component {
 
@@ -29,13 +29,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <><div class="placeAtCenter">
+      <><div className="placeAtCenter">
         <h1>Hello {this.state.userName} From Bridgelabz!!!</h1>
         <img src={logo} onClick={this.onClick} alt="Bridgelabz logo"></img>
-      </div><div class="placeAtCenter">
+      </div><div className="placeAtCenter">
           <input onChange={this.onNameChange}></input>
           <span className="error-output">{this.state.nameError}</span>
-        </div><main class="content">
+        </div><main className="content">
           <div id="article-content">
             <article>
               <p>At Bridgelabz,we're a techie community of</p>
